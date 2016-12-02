@@ -1,0 +1,36 @@
+// La idea es asignar a una variable de tipo clase el valor null (deberia conformar)
+// Y despues comparar si su valor es nulo o no.
+
+
+class Principal {
+
+	static void main() {
+
+		A a,b;
+		a = null;
+		if (a!=null) {
+			(System.printSln("[ERROR]"));
+		} else {
+			(System.printSln("[OK]"));
+		}
+		
+		b = a;
+		if (b==null) {
+			(System.printSln("[OK]"));
+		} else {
+			(System.printSln("[ERROR]"));
+		}
+		
+		if (b==a) {
+			(System.printSln("[OK]"));
+		} else {
+			(System.printSln("[ERROR]"));
+		}
+		
+	}
+
+}
+
+class A {
+
+}

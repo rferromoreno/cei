@@ -1,0 +1,17 @@
+// Codigo inalcanzable
+
+class A {
+
+	static void main() {
+		A a;
+		a = new A();
+		a.haceAlgo();
+		return ;
+		(System.printSln("Codigo inalcanzable"));
+	}
+	
+	dynamic int haceAlgo() {
+		return 15;
+		(System.printSln("Codigo inalcanzable"));
+	}
+}

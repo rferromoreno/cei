@@ -1,0 +1,42 @@
+// Sirve para probar que se estan heredando correctamente las variables (con los offset correctos)
+
+class Principal {
+
+	static void main() {
+
+		B b;
+		b = new B();
+		
+		(System.printSln("Si muestra un 25 esta OK"));
+		b.metodo3();
+	}
+
+}
+
+class A {
+
+	public int a;
+	public int b;
+
+	dynamic int metodo1(int x, int y) {
+		a = 2*x;
+		b = -y;
+		return a-b;
+	}
+}
+
+class B extends A {
+
+	public boolean a;		// defino variables de instancia con mismo nombre que las heredadas.
+	public boolean b;
+	
+	dynamic int metodo2() {
+		int aux;
+		aux = metodo1(10,5);
+		return aux;
+	}
+	
+	dynamic void metodo3() {
+		(System.printIln(metodo2()));
+	}
+}

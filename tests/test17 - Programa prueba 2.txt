@@ -1,0 +1,87 @@
+// Programa de prueba. 
+
+class A {
+
+	static void main() {
+	
+		Persona a, b;
+	
+		int d,m,an;
+		d = 25;
+		m = 12;
+		an = 2016;
+	
+		(System.printSln("Creando Persona 1"));
+		a = new Persona(25,12,2016);
+		(System.printSln("Creando Persona 2"));
+		b = new Persona(d,m,an);
+		
+		if (a.compareTo(b)) {
+			(System.printSln("Las personas tienen la misma fecha de nacimiento"));
+		} else {
+			(System.printSln("Las personas cumplen en dias distintos"));
+		}
+		
+		(System.printSln("Creando Persona Nueva"));
+		b = new Persona(1,1,2000);
+		
+				
+		if (a.compareTo(b)) {
+			(System.printSln("Las personas tienen la misma fecha de nacimiento"));
+		} else {
+			(System.printSln("Las personas cumplen en dias distintos"));
+		}
+		
+	}
+
+}
+
+class Persona {
+	
+	private int dia;
+	private int mes;
+	private int anio;
+
+	Persona(int d, int m, int a) {
+		dia = d;
+		mes = m;
+		anio = a;
+	}
+	
+	dynamic int getDia() {
+		return dia;
+	}
+	
+	dynamic int getMes() {
+		return mes;
+	}
+	
+	dynamic int getAnio() {
+		return anio;
+	}
+	
+	dynamic boolean compareTo(Persona p){
+		return ((dia==p.getDia()) && (mes==p.getMes()) && (anio==p.getAnio()));
+	}
+}
+
+class SystemIO extends System {
+
+	/* 	Lee una secuencia de digitos terminada en enter y la transforma. 
+		Se asume que la secuencia contiene solamente digitos (no caracteres)
+	*/
+	static int readNumero() {
+	
+		int rta, aux, num;
+		rta = 0;
+		num = 0;
+		while ((num!=10) && (num!=13)) { // mientras que no sea enter
+			num = (System.read());
+			aux = num - 48;
+			if ((num!=10) && (num!=13))
+				rta = rta * 10 + aux;
+		}
+		return rta;
+	}
+
+}

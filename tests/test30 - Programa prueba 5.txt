@@ -1,0 +1,89 @@
+// Programa de prueba. 
+
+class A {
+
+	static void main() {
+	
+		Persona a, b;
+	
+		int d1,d2,m1,m2,a1,a2;
+		(System.printS("Ingrese un dia: "));
+		d1 = (SystemIO.readNumero());
+		(System.printS("Ingrese un mes: "));
+		m1 = (SystemIO.readNumero());
+		(System.printS("Ingrese un anio: "));
+		a1 = (SystemIO.readNumero());
+		
+		(System.printS("Creando Persona 1"));
+		a = new Persona(d1,m1,a1);
+		
+		(System.printS("Ingrese un dia: "));
+		d2 = (SystemIO.readNumero());
+		(System.printS("Ingrese un mes: "));
+		m2 = (SystemIO.readNumero());
+		(System.printS("Ingrese un anio: "));
+		a2 = (SystemIO.readNumero());
+		
+		(System.printS("Creando Persona 2"));
+		b = new Persona(d2,m2,a2);
+		
+		if (a.compareTo(b)) {
+			(System.printS("Las personas tienen la misma fecha de nacimiento"));
+		} else {
+			(System.printS("Las personas cumplen en dias distintos"));
+		}
+		
+	}
+
+}
+
+class Persona {
+	
+	private int dia;
+	private int mes;
+	private int anio;
+
+	Persona(int d, int m, int a) {
+		dia = d;
+		mes = m;
+		anio = a;
+	}
+	
+	dynamic int getDia() {
+		return dia;
+	}
+	
+	dynamic int getMes() {
+		return mes;
+	}
+	
+	dynamic int getAnio() {
+		return anio;
+	}
+	
+	dynamic boolean compareTo(Persona p){
+		return ((dia==p.getDia()) && (mes==p.getMes()) && (anio==p.getAnio()));
+	}
+}
+
+class SystemIO extends System {
+
+	/* 	Lee una secuencia de digitos terminada en enter y la transforma. 
+		Se asume que la secuencia contiene solamente digitos (no caracteres)
+	*/
+	static int readNumero() {
+	
+		int rta, aux, num;
+		rta = 0;
+		num = 0;
+		while ((num!=10) && (num!=13)) { // mientras que no sea enter
+			num = (System.read());
+			aux = num - 48;
+			if ((num!=10) && (num!=13))
+				rta = rta * 10 + aux;
+		}
+		(System.read()); // limpio buffer
+		return rta;
+	}
+
+}

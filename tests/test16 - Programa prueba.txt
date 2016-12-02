@@ -1,0 +1,55 @@
+// Programa de prueba. 
+
+class A {
+
+	static void main() {
+	
+		int x;
+		(System.printS("Ingrese un numero: "));
+		x = (SystemIO.readNumero());
+		
+		if (esCapicua(x))
+			(System.printS("El numero es capicua"));
+		else 
+			(System.printS("El numero NO es capicua"));
+		
+		
+	}
+	
+	static boolean esCapicua(int n) {
+		return (invertir(n)==n);
+	}
+	
+	static int invertir(int n) {
+		int rta;
+		rta = 0;
+		while (n!=0) {
+			rta = rta*10 + (n % 10);
+			n = n / 10;
+		}
+		return rta;
+	}
+
+}
+
+class SystemIO extends System {
+
+	/* 	Lee una secuencia de digitos terminada en enter y la transforma. 
+		Se asume que la secuencia contiene solamente digitos (no caracteres)
+	*/
+	static int readNumero() {
+	
+		int rta, aux, num;
+		rta = 0;
+		num = 0;
+		while ((num!=10) && (num!=13)) { // mientras que no sea enter
+			num = (System.read());
+			aux = num - 48;
+			if ((num!=10) && (num!=13))
+				rta = rta * 10 + aux;
+		}
+		num = (System.read()); // limpio buffer
+		return rta;
+	}
+
+}

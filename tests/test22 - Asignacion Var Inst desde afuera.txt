@@ -1,0 +1,47 @@
+// Test para probar la asignacion de variables de instancia publicas desde "afuera"
+// Tambien uso una variable auxiliar para referenciar a la primera y asi modificar las referencias (ojo, no hay copias!)
+
+
+class Principal {
+
+	static void main() {
+
+		A a, b;
+		
+		a = new A();
+		
+		a.a = 13;
+		a.boo = true;
+		a.str = "Hola";
+		a.b = 42;
+		
+		a.mostrarMisVars();
+		
+		b = a;
+		
+		b.a = 100;
+		b.boo = false;
+		
+		b.mostrarMisVars();
+		
+		a.mostrarMisVars();
+		
+	}
+
+}
+
+class A {
+
+	public int a;
+	public boolean boo;
+	public String str;
+	public int b;
+	
+	dynamic void mostrarMisVars() {
+		(System.printIln(a));
+		(System.printIln(b));
+		(System.printBln(boo));
+		(System.printSln(str));
+	}
+
+}

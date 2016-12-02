@@ -1,0 +1,50 @@
+// Para probar las llamadas a metodos dinamicos (sin argumentos)
+
+class A {
+
+	static void main() {
+	
+		B b;
+		C c;
+		D d;
+		
+		b = new B();
+		c = new C();
+		d = new D();
+		
+		(System.printS("Soy B... "));
+		b.m1();
+		(System.printS("Soy C... "));
+		c.m1();
+		c.m2();
+		(System.printS("Soy D... "));
+		d.m1();
+		d.m2();
+		
+		b = new D();
+		(System.printS("Soy D (con new B) "));
+		b.m1();
+	}
+
+}
+
+class B {
+
+	dynamic void m1() {
+		(System.printS("Entre al m1 de B "));
+		(System.printSln("[OK]"));
+	}
+}
+
+class C extends B {
+
+
+	dynamic void m2() {
+		(System.printS("Entre al m2 de C "));
+		(System.printSln("[OK]"));
+	}
+}
+
+class D extends C {
+
+}

@@ -1,0 +1,11 @@
+// Clase para probar que no hay errores durante la declaracion de variables locales
+
+class A {
+
+	static void main() {
+		int a, b, c;
+		boolean d;
+		String aaa;
+	}
+
+}

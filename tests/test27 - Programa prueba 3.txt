@@ -1,0 +1,44 @@
+// Ejemplo 1
+
+class Persona {
+
+	public String nombre;
+	public String direccion;
+	public int telefono;
+	
+	Persona(String nombre, String direccion, int telefono) {
+		this.nombre = nombre;
+		this.direccion = direccion;
+		this.telefono = telefono;
+	}
+	
+	dynamic void llamar(Persona per) {
+		this.mostrar();
+		per.mostrar();
+	}
+	
+	dynamic Persona buscarEnAgenda(int num) {
+		return new Persona("Cacho","Comahue",33333);
+	}
+	
+	dynamic void mostrar(){
+		(System.printSln(nombre));
+		(System.printSln(direccion));
+		(System.printIln(telefono));
+	}
+
+}
+
+class Entidad {
+
+	static void main() {
+		Persona p1, p2, p3;
+		p1 = new Persona("Jorge","Sarmiento 52",4525290);
+		p2 = new Persona("Guillermo","Alem 1253",4595131);
+		p3 = new Persona("Ana","Colon 80",4595000);
+		
+		p1.buscarEnAgenda(123).llamar(p2);
+		
+	}
+
+}

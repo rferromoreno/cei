@@ -1,0 +1,34 @@
+// Proposito: Revisar el correcto funcionamiento del casteo.
+// Las expresiones usadas en el programa son semanticamente validas
+
+class A { 
+	static void main() {
+		
+		Animal a1;
+		a1 = new Perro();
+		
+		// Deberia ladrar
+		a1.hacerRuido(); 
+		
+		Perro p1;
+		if (a1 instanceof Perro)
+			p1 = [Perro] a1;
+		
+		// Deberia ladrar
+		p1.hacerRuido();
+	}
+}
+
+class Animal {
+
+	dynamic void hacerRuido() {
+		(System.printSln("AARRGG"));
+	}
+}
+class Mamifero extends Animal { }
+class Perro extends Mamifero { 
+
+	dynamic void hacerRuido() {
+		(System.printSln("GUAU"));
+	}
+}

@@ -1,0 +1,42 @@
+// Proposito: Revisar el correcto funcionamiento de expresiones parentizadas
+// El tipo de una expresion parentizada es el tipo de la expresion anidada
+
+class A { 
+
+	public boolean b;
+	
+	static void main() {
+		A a;
+		a = new A();
+		a.test();
+		return ;
+	}
+	
+	dynamic void test() {
+		
+		int a, b, c, d;
+		char e, f, g, h;
+		boolean i, j, k;
+		String str, cad, msj;
+		
+		c = 1;
+		d = 2;
+		
+		str = (((("Hola"))));
+		a = (((-5)));
+		b = ((((c)+3)*d));
+		e = (((('e'))));
+		
+		i = (((2+3*(a-b))) > ((15)));
+		j = (((!j))!=( k && i));
+	
+		(System.printSln(str));
+		(System.printIln(a));
+		(System.printIln(b));
+		(System.printCln(e));
+		(System.printBln(i));
+		(System.printBln(j));
+	}
+	
+	
+}

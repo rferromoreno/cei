@@ -1,0 +1,32 @@
+// Para probar IFs anidados
+
+class A {
+
+	static void main() {
+		int a, b, c;
+		boolean d, e;
+		String str;
+		
+		a = 100;
+		b = 2;
+		c = -b;
+		
+		if (a>b) {
+			(System.printSln("[OK]"));
+			if (true) {
+				(System.printSln("[OK]"));
+				if ((c*(-1))==b) {
+					(System.printSln("[OK]"));
+				} else {
+					(System.printSln("[ERROR]"));
+				}
+			} else {
+				(System.printSln("[ERROR]"));
+			}
+		} else {
+			(System.printSln("[ERROR]"));
+		}
+		
+	}
+
+}

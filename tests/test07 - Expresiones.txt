@@ -1,0 +1,59 @@
+// Clase para probar expresiones, principalmente operaciones matematicas
+// Se usa la misma estrategia que en el test anterior
+
+class A {
+
+	static void main() {
+		int a, b, c;
+		boolean d, e;
+		String str;
+		
+		a = ((2+3)*6)/2;
+		b = a*100;
+		c = -b;
+		
+		d = true;
+		e = false;
+		
+		str = "Hola";
+		
+		if (d && e) {
+			(System.printSln("No deberia entrar por aca [Hay un error]"));
+		} else {
+			(System.printSln("[OK]"));
+		}
+		
+		if ((b%2)==0) {
+			(System.printSln("[OK]"));
+		} else {
+			(System.printSln("No deberia entrar por aca [Hay un error]"));
+		}
+		
+		if (c!=b)
+			(System.printSln("[OK]"));
+			
+		if (c==-b)
+			(System.printSln("[OK]"));
+			
+		if (!d || e) {
+			(System.printSln("No deberia entrar por aca [Hay un error]"));
+		} else {
+			(System.printSln("[OK]"));
+		}
+		
+		if (d && !e) {
+			(System.printSln("[OK]"));
+			a = 123;
+		} else {
+			(System.printSln("No deberia entrar por aca [Hay un error]"));
+		}
+		
+		if (a==123) {
+			(System.printSln("[OK]"));
+		}
+		
+		(System.printSln(str));
+		
+	}
+
+}

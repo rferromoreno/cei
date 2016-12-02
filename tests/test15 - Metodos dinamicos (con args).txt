@@ -1,0 +1,53 @@
+// Para probar las llamadas a metodos dinamicos (con argumentos)
+
+class A {
+
+	static void main() {
+	
+		B b;
+		C c;
+		D d;
+		
+		b = new B();
+		c = new C();
+		d = new D();
+		
+		(System.printSln("Soy B... "));
+		b.m1(2,3,"2+3=");
+		(System.printSln("Soy C... "));
+		c.m1(15,15,"Deberia dar 30... ");
+		c.m2(true);
+		(System.printSln("Soy D... "));
+		d.m1(2,2,"Hago cuentas, 2+2=");
+		d.m2(!false);
+		
+		b = new D();
+		(System.printSln("Soy D (con new B) "));
+		b.m1(10,5,"10+5=");
+	}
+
+}
+
+class B {
+
+	dynamic void m1(int a, int b, String str) {
+		(System.printS(str));
+		(System.printIln(a+b));
+	}
+}
+
+class C extends B {
+
+
+	dynamic void m2(boolean rta) {
+		if (rta) {
+			(System.printSln("[OK] Entre por el if"));
+		} else {
+			(System.printSln("[ERROR] Entre por el else"));
+		}
+	}
+}
+
+class D extends C {
+
+}

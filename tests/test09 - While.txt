@@ -1,0 +1,28 @@
+// Para probar sentencias while (simples, con y sin bloques)
+
+
+class A {
+
+	static void main() {
+		int a, b, c;
+		boolean d, e;
+		String str;
+		
+		a = 0;
+		
+		while (a<10)
+			a = a+1;
+			
+		while (a<20) {
+			(System.printIln(a));
+			a = a+1;
+		}
+		
+		if (a==20) {
+			(System.printSln("[OK]"));
+		} else {
+			(System.printSln("[ERROR]"));
+		}
+	}
+
+}

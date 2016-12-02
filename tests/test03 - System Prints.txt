@@ -1,0 +1,21 @@
+// Clase simple para probar algunos tipos de print
+
+class A {
+
+	static void main() {
+		(System.printSln("Hola"));
+		(System.printS("Hola"));
+		(System.printSln(" mundo"));
+		(System.printI(15));
+		(System.printIln(30));
+		(System.printIln(7*2));
+		(System.printI(2+2));
+		(System.printC('H'));
+		(System.printCln('o'));
+		(System.printB(true));
+		(System.printBln(false));
+		(System.printBln(true || false));
+		(System.printBln(true && false));
+	}
+
+}

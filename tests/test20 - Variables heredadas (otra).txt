@@ -1,0 +1,55 @@
+// Sirve para probar que se estan heredando correctamente las variables (con los offset correctos)
+// La clase B utiliza variables publicas declaradas en la clase padre (A).
+
+class Principal {
+
+	static void main() {
+
+		C b;
+		b = new C();
+		
+		(System.printSln("Si muestra un 25 y un 65 esta OK"));
+		b.metodo3();
+	}
+
+}
+
+class A {
+
+	public int a;
+	public int b;
+
+	dynamic int metodo1(int x, int y) {
+		a = 2*x;
+		b = -y;
+		return a-b;
+	}
+}
+
+class B extends A {
+
+	public int c;
+	
+	dynamic void metodo4(){
+		c = a+b+50;
+		(System.printIln(c));
+	}
+	
+}
+
+class C extends B {
+
+	public boolean a;		// defino variables de instancia con mismo nombre que las heredadas.
+	public boolean b;
+	
+	dynamic int metodo2() {
+		int aux;
+		aux = metodo1(10,5);
+		return aux;
+	}
+	
+	dynamic void metodo3() {
+		(System.printIln(metodo2()));
+		metodo4();
+	}
+}

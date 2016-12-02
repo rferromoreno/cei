@@ -1,0 +1,37 @@
+// Probar que el constructor de las clases funciona correctamente
+// Deberia mostrar
+// 10
+// 30
+
+class A {
+
+	static void main() {
+	
+		B b;
+		C c;
+		
+		b = new B();
+		c = new C(30);
+		
+		(System.printIln(b.a));
+		(System.printIln(c.a));
+		
+	}
+
+}
+
+class B {
+
+	public int a;
+
+	B() {
+		a=10;
+	}
+}
+
+class C extends B {
+
+	C(int x) {
+		a = x;
+	}
+}

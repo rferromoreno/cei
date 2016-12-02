@@ -1,0 +1,55 @@
+// Para probar las llamadas a metodos estaticos (con argumentos)
+
+class A {
+
+	static void main() {
+	
+		(B.m1(2,2,true));
+	
+		int aux;
+		aux = (C.m2(10,5));
+		
+		if (aux==50) {
+			(System.printSln("[OK]"));
+		} else {
+			(System.printSln("[ERROR]"));
+		}
+		
+		boolean rta;
+		rta = (C.m3(true));
+		
+		if (!rta) {
+			(System.printSln("[OK]"));
+		} else {
+			(System.printSln("[ERROR]"));
+		}
+		
+	}
+
+}
+
+class B {
+
+	static void m1(int a, int x, boolean c) {
+		if ((a==x) && (c)) {
+			(System.printSln("Entre a m1"));
+			(System.printSln("[OK]"));
+		} else {
+			(System.printSln("[ERROR]"));
+		}
+	}
+}
+
+class C {
+
+
+	static int m2(int x, int y) {
+		(System.printSln("Entre a m2"));
+		return x*y;
+	}
+	
+	static boolean m3(boolean c) {
+		(System.printSln("Entre a m3"));
+		return !c;
+	}
+}

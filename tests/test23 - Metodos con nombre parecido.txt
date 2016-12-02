@@ -1,0 +1,37 @@
+// Para probar que no usa la misma etiqueta para metodos con nombre similar
+// Tener en cuenta que la CEIVM es case insensitive!
+// Entonces para minijava "mA" y "ma" refiere a dos metodos distintos
+// Pero si fueran etiquetas, para CEIASM refiere a las mismas etiquetas.
+
+
+class Principal {
+
+	static void main() {
+		(A.metodoA());
+		(A.metodoa());
+		A a;
+		a = new A();
+		a.metodoB();
+		a.metodob();
+	}
+
+}
+
+class A {
+
+	static void metodoA() {
+		(System.printSln("metodoA (mayusc)"));
+	}
+	
+	static void metodoa() {
+		(System.printSln("metodoa (minusc)"));
+	}
+	
+	dynamic void metodob() {
+		(System.printSln("metodob (minusc)"));
+	}
+	
+	dynamic void metodoB() {
+		(System.printSln("metodoB (mayusc)"));
+	}
+}

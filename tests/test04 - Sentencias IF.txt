@@ -1,0 +1,26 @@
+// Clase simple para probar sentencias if (basicas)
+
+class A {
+
+	static void main() {
+		// Primer if
+		if (true) {
+			(System.printSln("Entra bien al primer if [OK]"));
+		}
+
+		// Segundo if
+		if (3>2) {
+			(System.printSln("Entra bien al segundo if [OK]"));
+		} else {
+			(System.printSln("Ups, aca no deberia entrar (else del 2do if) [ERROR] "));
+		}
+		
+		// Tercer if
+		if (2>3) {
+			(System.printSln("Ups, aca no deberia entrar (sent del 3er if) [ERROR]"));
+		} else {
+			(System.printSln("Entra bien al tercer if [OK]"));
+		}
+	}
+
+}

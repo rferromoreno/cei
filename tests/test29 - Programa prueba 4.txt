@@ -1,0 +1,62 @@
+
+class A {
+
+	static void main() {
+		Node a,b,c,d,e;
+		a = new Node(1);
+		b = new Node(3);
+		c = new Node(5);
+		d = new Node(7);
+		e = new Node(9);
+		c.setSiguiente(a);
+		a.setSiguiente(b);
+		b.setSiguiente(e);
+		e.setSiguiente(d);
+		c.toString();
+		(System.println());
+		c.getSiguiente().getSiguiente().setElem(32);
+		c.toString();
+		(System.println());
+	}
+	
+	dynamic int haceAlgo() {
+		return 15;
+		(System.printSln("Codigo inalcanzable"));
+	}
+}
+
+class Node {
+
+	public int elem;
+	public Node sig;
+	
+	Node(int x) {
+		elem = x;
+		sig = null;
+	}
+	
+	dynamic void setSiguiente(Node s) {
+		sig = s;
+	}
+	
+	dynamic int getElem() {
+		return elem;
+	}
+	
+	dynamic Node getSiguiente() {
+		return sig;
+	}
+	
+	dynamic void setElem(int x) {
+		elem = x;
+	}
+	
+	dynamic void toString() {
+		(System.printI(elem));
+		(System.printC('-'));
+		(System.printC('>'));
+		if (sig!=null) 
+			sig.toString();
+	}
+	
+}

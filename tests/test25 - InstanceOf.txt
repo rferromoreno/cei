@@ -1,0 +1,27 @@
+// Proposito: Revisar el correcto funcionamiento del instanceOf 
+// Las expresiones usadas en el programa son semanticamente validas
+
+class A { 
+	static void main() {
+		
+		Animal a1;
+		a1 = new Perro();
+		Perro p1;
+		p1 = new Perro();
+		if (a1 instanceof Perro) {
+			(System.printSln("a1 es instancia de perro [OK]"));
+		} else  {
+			(System.printSln("a1 es instancia de perro [ERROR]"));
+		}
+		
+		if (a1 instanceof Animal) {
+			(System.printSln("a1 no es instancia de animal [ERROR]"));
+		} else  {
+			(System.printSln("a1 no es instancia de animal [OK]"));
+		}
+	}
+}
+
+class Animal { }
+class Mamifero extends Animal { }
+class Perro extends Mamifero { }

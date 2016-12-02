@@ -1,0 +1,39 @@
+// Clase para probar el correcto funcionamiento de asignaciones simples
+// La idea es comprobar por pantalla que este mostrando bien los valores
+
+/* Se espera que muestre
+15
+1000
+333
+true
+Hola
+Cambie el valor de 'a', ahora vale 42
+*/
+
+
+class A {
+
+	static void main() {
+		int a, b, c;
+		boolean d;
+		String str;
+		a = 15;
+		b = 1000;
+		c = 333;
+		d = true;
+		str = "Hola";
+		(System.printIln(a));
+		(System.printIln(b));
+		(System.printIln(c));
+		(System.printBln(d));
+		(System.printSln(str));
+		
+		// Cambio el valor de a y de str
+		a = 42;
+		str = "Cambie el valor de 'a', ahora vale ";
+		(System.printS(str));
+		(System.printIln(a));
+
+	}
+
+}

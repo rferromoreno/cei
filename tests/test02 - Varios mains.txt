@@ -1,0 +1,26 @@
+// El proposito de este test es verificar que el compilador da una advertencia 
+// ante la presencia de varios static void main() en las distintas clases
+// Verificar que el codigo ceiasm este ensamblando bien la etiqueta del main generada
+// la cual deberia ser la misma etiqueta de la clase informada en pantalla
+
+class Cb{
+
+	static void main() {
+	
+	}
+}
+
+class B {
+
+	static void main() {
+	
+	}
+}
+
+class Ca {
+
+	static void main() {
+	
+	}
+
+}
